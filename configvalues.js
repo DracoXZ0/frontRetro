@@ -1,3 +1,3 @@
 module.exports={
-    URLAPI:  "dracoxz70.pythonanywhere.com"
+    URLAPI:  "https://dracoxz70.pythonanywhere.com/"
 }
