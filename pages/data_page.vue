@@ -5,15 +5,15 @@
         <aside class="sidebar">
             <NuxtLogo />
             <div class="menu">
-                <h5>Cantidad de Geofonos: {{ geofonos }}</h5>
+                <h5>Cantidad de geófonos: {{ geofonos }}</h5>
                 <li @click="cambiarContenido('boton1')" class="button">
                     <span class="text">
-                        Retro-Calculo
+                        Retro-Cálculo
                     </span>
                 </li>
                 <li @click="cambiarContenido('boton2'), getImage()" class="button">
                     <span class="text">
-                        Graficas
+                        Gráficas
                     </span>
                 </li>
             </div>
@@ -23,11 +23,11 @@
         <!-- Contenido principal -->
         <div class="content">
             <div class="mt-4" v-if="contenido == 'boton1' && boton1_contenido == 0" style="margin: 10%;">
-                <h4>Ingrese la distancia de cada geofono en pulgadas</h4>
+                <h4>Ingrese la distancia de cada geófono en pulgadas</h4>
                 <b-card img-src="https://picsum.photos/id/182/600/600" img-alt="Card image" img-right class="mb-3">
                     <div class="input-field" v-for="(input, index) in distancia_D" :key="index + 2">
                         <b-form-input type="text" v-model="inputValues[index]" :name="`input_${index + 2}`"
-                            :placeholder="`Geofono ${index + 2}`"></b-form-input><br>
+                            :placeholder="`Geófono ${index + 2}`"></b-form-input><br>
                     </div>
                     <br>
                     <b-button variant="warning" @click="guardarValores('boton3')">Guardar Valores</b-button>
